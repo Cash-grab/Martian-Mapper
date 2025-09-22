@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Mars Mapper! The Mars gallery</title>
+</head>
+<body>
+    <div class="formContainer">
+    <h1 class="formTitle">Mars gallery Viewer!</h1>
+    <h4>Lookup for a image from mars!!</h4>
+    <br>
+    <form action="/query" method="post">
+        <label for="rover" class="roverSelect">Choose a Rover:</label>
+        <select name="rover" id="rover" class="roverSelectMenu">
+            <option value="curiosity">Curiosity</option>
+            <option value="spirit">Spirit</option>
+            <option value="opportunity">Opportunity</option>
+            <option value="Perseverance">Perseverance</option>
+        </select>
+        <br><br>
+        <label for="query_type" class="searchBy">Query by:</label>
+        <select name="query_type" id="query_type" onchange="toggleInputs()">
+            <option value="earth_date">Earth date</option>
+            <option value="sol">Martian Sol</option>
+        </select>
+        <br><br>
+        <div id="earth_date_input">
+            <label for="earth_date">Earth Date:</label>
+            <input type="date" id="earth_date" name="earth_date">
+        </div>
+        <div id="sol_input" style="display: none;">
+            <label for="sol">Martian Sol:</label>
+            <input type="number" id="sol" name="sol" value="1000">
+        </div>
+        <br>
+        <button type="submit" class="submitButton">Search for Photos!</button>
+    </form>
+    </div>
+    <script>
+        function toggleInputs() {
+            const queryType = document.getElementById('query_type').value;
+            const solDiv = document.getElementById('sol_input');
+            const earthDateDiv = document.getElementById('earth_date_input');
+            
+            if (queryType === 'sol') {
+                solDiv.style.display = 'block';
+                earthDateDiv.style.display = 'none';
+            } else {
+                solDiv.style.display = 'none';
+                earthDateDiv.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
