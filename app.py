@@ -75,4 +75,4 @@ def mars_news():
     return render_template('marsNews.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
