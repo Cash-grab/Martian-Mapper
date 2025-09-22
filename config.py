@@ -1,0 +1,2 @@
+import os
+NASA_API_KEY = os.environ.get('NASA_API_KEY', 'FWfMV1Y4DLpABZHUGbW9MhMMej3yA12XucJ4YR1a')
