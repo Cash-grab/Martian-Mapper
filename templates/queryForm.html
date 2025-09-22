@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/style.css">
+{% extends "base.html" %}
+{% block head %}
     <title>Mars Mapper! The Mars gallery</title>
-</head>
-<body>
+{% endblock %}
+{% block content %}
     <div class="formContainer">
     <h1 class="formTitle">Mars gallery Viewer!</h1>
-    <h4>Lookup for a image from mars!!</h4>
+    <h4 class="formSubtitle">Lookup for a image from mars!!</h4>
     <br>
     <form action="/query" method="post">
         <label for="rover" class="roverSelect">Choose a Rover:</label>
@@ -27,13 +23,17 @@
         </select>
         <br><br>
         <div id="earth_date_input">
-            <label for="earth_date">Earth Date:</label>
-            <input type="date" id="earth_date" name="earth_date">
+            <label for="earth_date selectors">Earth Date:</label>
+            <input class="selectors" type="date" id="earth_date" name="earth_date">
         </div>
         <div id="sol_input" style="display: none;">
             <label for="sol">Martian Sol:</label>
-            <input type="number" id="sol" name="sol" value="1000">
+            <input class="selectors" type="number" id="sol" name="sol" value="1000">
         </div>
+        <br>
+         <label for="quantity">How many images?</label>
+         <input class="numberSelector" type="number" id="quantity" name="quantity" min="1" max="999" value="5"> 
+        <br>
         <br>
         <button type="submit" class="submitButton">Search for Photos!</button>
     </form>
@@ -53,5 +53,4 @@
             }
         }
     </script>
-</body>
-</html>
+{% endblock %}

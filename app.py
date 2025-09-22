@@ -13,6 +13,10 @@ def home():
     """
     return render_template('homepage.html')
 
+@app.route('/tracker')
+def Tracker():
+    return render_template('ISSTracker.html')
+
 @app.route('/queryForm')
 def queryForm():
     """
@@ -44,11 +48,12 @@ def query_api():
         response.raise_for_status() # Raise an exception for bad status codes (4xx or 5xx)
 
         data = response.json()
+        imageQuantity = int(request.form.get('quantity', 5))
         
         if 'photos' in data and len(data['photos']) > 0:
             # You can process the data here to display it nicely.
             # For a start, let's just return the first few photos.
-            photos = data['photos'][:5] 
+            photos = data['photos'][:imageQuantity] 
             return render_template('results.html', photos=photos)
         else:
             return "No photos found for the specified criteria.", 404
@@ -59,6 +64,10 @@ def query_api():
 @app.route('/homepage')
 def homepage():
     return render_template('homepage.html')
+
+@app.route('/secretAppList')
+def secretAppList():
+    return render_template('secretAppList.html')
 
 
 if __name__ == '__main__':

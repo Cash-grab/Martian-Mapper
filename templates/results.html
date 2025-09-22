@@ -1,25 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/style.css">
+{% extends "base.html" %}
+{% block head %}
     <title>Query Results</title>
-</head>
-<body>
+    {% endblock %}
+    {%  block content %}
     <div class="headerResults">
-    <h1>Query Results</h1>
-    <div class="searchAgainButton"><a href="/">Search Again</a></div>
+        <h1>Query Results</h1>
+        <div class="searchAgainButton"><a href="/">Search Again</a></div>
     </div>
     <hr>
-<div class="imgBox">
-    {% if photos %}
+    <div class="imgBox">
+        {% if photos %}
         {% for photo in photos %}
-            <img src="{{ photo.img_src }}" alt="Mars Rover Photo">
+        <img src="{{ photo.img_src }}" alt="Mars Rover Photo">
         {% endfor %}
-    {% else %}
+        {% else %}
         <p>No photos were found for your search.</p>
-    {% endif %}
+        {% endif %}
     </div>
-</body>
-</html>
+    {% endblock %}

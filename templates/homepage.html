@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/style.css">
+{% extends "base.html" %}
+{% block head %}
     <title>Mars Mapper!</title>
-</head>
-<body>
-<div class="homeContainer">
-<h1 class="headingTitle">MARS<br>MAPPER!</h1>
-<a href="/queryForm" class="clickerTriangle"><div class="triangleButton"><span class="triangleText">Lets GO!</span></div></a>
-</div>
-<div class="creditContainer"><span class="credit">Made by Team ~ The NECK with ❤️</span></div>
-</html>
-</body>
+    {% endblock %}
+    {% block content %} 
+    <div class="homeContainer">
+        <h1 class="headingTitle">MARS<br>MAPPER!</h1>
+        <a href="/queryForm" class="clickerTriangle"><div class="triangleButton"><span class="triangleText">Lets GO!</span></div></a>
+        <div class="SecretApps">
+            <a href="/secretAppList">
+            <img src="/static/svgs/alien(2).svg" alt="A button that leads to secret apps!" class="exploreMore">
+            </a>
+    </div>
+    {% endblock %}

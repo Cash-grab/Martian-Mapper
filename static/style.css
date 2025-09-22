@@ -76,6 +76,19 @@ img {
     color: var(--background-color);
     transition: all 0.3s ease;
 }
+.SecretApps{
+    display: inline-block;
+}
+.exploreMore{
+    bottom: 12vw;
+    left:60vw;
+    color:white;
+    cursor: pointer;
+    position: relative;
+    width: 7vw;
+    border: none;
+    animation: float 3s ease-in-out infinite;
+}
 .creditContainer{
     position: fixed;
     bottom: 0;
@@ -94,11 +107,38 @@ img {
 }
 .formContainer{
     background-color: rgba(0,0,0,0.5);
-    padding: 20px;
+    backdrop-filter: blur(5px);
+    padding: 30px;
     border-radius: 10px;
-    width: 300px;
+    width: 400px;
     margin: 50px auto;
     text-align: center;
+}
+.formContainer{
+    background-color: rgba(255,255,255, 0.0);
+    color: white;
+    border: 5px solid black;
+    box-shadow: 0px 0px 29px 0px white;
+    transition: all 1.5s ease;
+}
+.formContainer:hover{
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+.formTitle{
+    font-size: 2em;
+    color: var(--secondary-color);
+}
+.formSubtitle{
+    font-size: 1em;
+    color: var(--background-color);
+    opacity: 0.5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.formSubtitle:hover{
+    border-radius: 10px 1px 10px 1px;
+    opacity: 1.0;
+    transition: all 0.5s ease;
 }
 .roverSelect{
     margin: auto;
@@ -107,6 +147,77 @@ img {
 .searchBy{
     margin: auto;
     font-size: 1.2em;
+}
+select, .selectors, .roverSelectMenu {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    padding: 0.5em;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+
+select option,
+.roverSelectMenu option {
+    background-color: white;
+    color: var(--primary-color);
+    transition: background 0.2s, color 0.2s;
+}
+
+select option:hover,
+select option:checked,
+select option:focus,
+select option:active,
+select option:target,
+.roverSelectMenu option:hover,
+.roverSelectMenu option:checked,
+.roverSelectMenu option:focus,
+.roverSelectMenu option:active,
+.roverSelectMenu option:target {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+select option,
+.roverSelectMenu option {
+    background-color: white;
+    color: var(--primary-color);
+    transition: background 0.2s, color 0.2s;
+}
+.numberSelector{
+    width: 4em;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0.5vw 0.5vh;
+    margin-left: 1vw;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+}
+.numberSelector:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid white;
+    transition: all 0.5s ease;
+    color:black;
+}
+.submitButton:hover{
+    background-color: rgba(255,255,255, 0.2);
+    color: white;
+    border: 5px solid black;
+    box-shadow: 0px 0px 29px 0px white;
+    transition: all 1s ease;
+}
+.submitButton{
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 1.5em;
+    padding: 5px 10px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 29px 0px black;
 }
 .headerResults{
     backdrop-filter: blur(10px);
@@ -127,11 +238,23 @@ img {
   flex-direction: column;
   flex-wrap: wrap;
 }
+.selectors{
+    color: white;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+}
+.selectors:hover{
+    background-color: rgba(255,255,255, 0.0);
+    color: white;
+    border: 5px solid black;
+    box-shadow: 0px 0px 29px 0px white;
+    transition: all 1.5s ease;
+}
 .searchAgainButton{
 background-color: rgba(193, 68, 14, 0.4);
   display: inline-block;
   border-radius: 0%;
-  margin-top: 10px;
   font-size: 1em;
   border: 2px solid black;
   box-shadow: 0px 0px 29px 0px black;
@@ -143,6 +266,33 @@ background-color: rgba(193, 68, 14, 0.4);
     font-size: 1.2em;
     text-decoration: none;
 }
+.marqueeContainer{
+    white-space: nowrap;
+    overflow: hidden;
+    /* background-color: rgba(0,0,0,0.5); */
+    backdrop-filter: blur(5px);
+    border: 2px solid black;
+    margin: 10px 0;
+}
+.marqueeContainer a{
+    text-decoration: none;
+        color: var(--secondary-color);
+}
+.marqueeContainer p{
+    display: inline-block;
+    padding-left: 100%;
+    animation: marqueeScrollLeft 15s linear infinite;
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.secretAppTitle{
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 3em;
+    color: var(--primary-color);
+    font-family: 'Ahsing', cursive;
+}
 
 
 @font-face {
@@ -153,4 +303,12 @@ background-color: rgba(193, 68, 14, 0.4);
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+@keyframes marqueeScrollLeft{
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+@keyframes marqueeScrollRight{
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
