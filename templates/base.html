@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="marqueeContainer"><a href=""><p>What if I told you... NASA could have found signs of life on mars! June of this year!!</a></p></div>
+    {% block marquee %}
+    <div class="marqueeContainer">
+        <a href="/marsNews">
+            <p>Check this out... NASA could have found signs of life on Mars! June of this year!! You Can see the pictures too.</p>
+        </a>
+        {% block marqueeContent %}{% endblock %}
+    </div>
+    {% endblock %}
     {% block content %}
     {% endblock %}
     <div class="creditContainer"><span class="credit">Made by Team ~ The NECK with ❤️</span></div>

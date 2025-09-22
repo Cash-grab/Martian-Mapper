@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block head %}
+    <title>Mars Weather</title>
+{% endblock %}
+{% block content %}
+    <div class="formContainer">
+        <h1 class="formTitle">Mars Weather (InSight Lander)</h1>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% elif weather %}
+            <h2>Sol {{ weather.sol }}</h2>
+            <ul style="list-style:none; font-size:1.2em;">
+                <li><strong>Season:</strong> {{ weather.Season|capitalize }}</li>
+                <li><strong>Min Temp:</strong> {{ weather.AT.mn }} °C</li>
+                <li><strong>Max Temp:</strong> {{ weather.AT.mx }} °C</li>
+                <li><strong>Avg Temp:</strong> {{ weather.AT.av }} °C</li>
+                <li><strong>Pressure:</strong> {{ weather.PRE.av }} Pa</li>
+                <li><strong>Wind Speed:</strong> {{ weather.HWS.av }} m/s</li>
+            </ul>
+        {% else %}
+            <p>No weather data available.</p>
+        {% endif %}
+        <div style="margin-top:2em;">
+            <a href="/" class="submitButton">Return Home</a>
+        </div>
+    </div>
+{% endblock %}
