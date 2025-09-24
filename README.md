@@ -28,7 +28,7 @@ Pull stunning images directly from NASA’s Mars Rover API, view live Mars weath
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/martian-mapper.git
+    git clone https://github.com/Cash-grab/Martian-Mapper
     cd martian-mapper
     ```
 
