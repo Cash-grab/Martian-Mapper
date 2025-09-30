@@ -16,5 +16,5 @@ else:
     roverresp = requests.get(roverurl)
     roverdata = roverresp.json()
     with open(file_name, 'w') as f:
-        json.dump(roverdata, f, indet=4)
+        json.dump(roverdata, f, indent=4)
 # Perform actions if the file does not exist

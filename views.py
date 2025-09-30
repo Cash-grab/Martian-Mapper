@@ -108,7 +108,7 @@ def random_mars_image():
     photo = random.choice(data['photos'])
     print("IMAGE CHOOSEN: ", photo['img_src'])
     while "BR.JPG" in photo['img_src']:
-        print(photo['img_src'], '\n Caught inavlid image, now retying')
+        print(photo['img_src'], '\n Caught invalid image, now retying')
         return random_mars_image()
     
 
