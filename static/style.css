@@ -4,7 +4,7 @@
     --accent-color: #622e1b;
     --background-color: #e1b373;
     --text-color: #ffffff;
-    --background-image: url('/Resource/Images/MarsMapperBG.jpg');
+    --background-image: url('/static/MarsMapperBG.jpg');
     --Ahsing: 'Ahsing', cursive;
 }
 *{
