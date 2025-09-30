@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+#map {
+    height: 100vh;
+    width: 110vw;
+    border: 2px solid black;
+}
+
+#game-ui {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    max-width: 350px;
+}
+
+#game-ui h2 {
+    margin-top: 0;
+}
+
+#mars-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #000;
+}
+
+#game-info {
+    margin-top: 1em;
+}
+
+#next-round {
+    margin-top: 1em;
+}
