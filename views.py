@@ -126,3 +126,56 @@ def random_mars_image():
         "img": photo["img_src"],
         "coords": coords
     })
+
+@views.route('/mars3d')
+def mars3d():
+    return render_template('marsMap3D.html')
+
+# MARS_MISSIONS_TIMELINE_DATA = {
+#   "title": {
+#     "media": {
+#       "url": "/static/MarsMapperBG.jpg", # Use a path relative to your static folder
+#       "caption": "More than 60 years of Mars Exploration"
+#     },
+#     "text": {
+#       "headline": "Mars Missions: A Timeline of Exploration",
+#       "text": "<p>From the first flyby to the current rovers, track humanity's journey to the Red Planet.</p>"
+#     }
+#   },
+#   "events": [
+#     # Include the full list of events you have, for brevity, here are a few:
+#     {
+#       "start_date": {"year": "1964", "month": "11", "day": "28"},
+#       "end_date": {"year": "1967", "month": "12", "day": "21"},
+#       "text": {
+#         "headline": "Mariner 4 (USA)",
+#         "text": "First successful flyby of Mars. Sent back 21 black and white photos, revealing a cratered, moon-like surface."
+#       },
+#       "media": {"url": "...", "caption": "Mariner 4 Spacecraft"}
+#     },
+#     {
+#       "start_date": {"year": "1997", "month": "7", "day": "4"},
+#       "end_date": {"year": "1997", "month": "9", "day": "27"},
+#       "text": {
+#         "headline": "Mars Pathfinder & Sojourner (USA)",
+#         "text": "First successful wheeled rover mission. Proved the concept of mobile exploration."
+#       },
+#       "media": {"url": "...", "caption": "Sojourner at Yogi rock"}
+#     },
+#     {
+#       "start_date": {"year": "2020", "month": "7", "day": "30"},
+#       "tag": "ONGOING",
+#       "text": {
+#         "headline": "Perseverance Rover & Ingenuity Helicopter (USA)",
+#         "text": "Flagship mission searching for signs of ancient life and collecting rock samples for future return to Earth."
+#       },
+#       "media": {"url": "...", "caption": "Perseverance Landing"}
+#     }
+#   ]
+# }
+
+# # New route to serve the JSON data
+# @views.route('/marsTimelineData')
+# def mars_timeline_data():
+#     """Returns the mission data in JSON format for Timeline.js."""
+#     return jsonify(MARS_MISSIONS_TIMELINE_DATA)

@@ -346,7 +346,49 @@ select option,
     margin-bottom: 2em;
     background: #000;
 }
-
+.awesomeHeading{
+text-align: center;
+display: block;
+margin: auto;
+flex-direction: column;
+gap: 1em;
+background-color: transparent;
+backdrop-filter: blur(5px);
+border: 2px solid black;
+transition: 1s ease-in;
+}
+.awesomeHeading h1{
+    color: var(--primary-color);
+    margin-top: 2vh;
+    font-family: var(--Ahsing);
+  text-shadow:
+    /* First layer: inner glow */
+    0 0 4px rgba(102, 37, 0, 0.8),
+    /* Second layer: wider, softer outline/glow */
+    0 0 10px rgba(255, 255, 255, 0.6),
+    /* Third layer: thin, sharp outline */
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.awesomeHeading h2{
+  color: var(--secondary-color); /* Main text color (white) */
+  text-shadow:
+    /* First layer: inner glow */
+    0 0 4px rgba(102, 37, 0, 0.8),
+    /* Second layer: wider, softer outline/glow */
+    0 0 10px rgba(255, 255, 255, 0.6),
+    /* Third layer: thin, sharp outline */
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    margin: 2vh;
+}
+.timelineContainer{
+    margin-bottom: 10vh;
+}
 
 @font-face {
     font-family: 'Ahsing';

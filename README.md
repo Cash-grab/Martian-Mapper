@@ -61,7 +61,7 @@ Pull stunning images directly from NASA’s Mars Rover API, view live Mars weath
 ## ⚙️ Tech Stack
 
 - **Backend:** Python, Flask, Blueprints
-- **Frontend:** HTML5, CSS3, Jinja2, JavaScript, Leaflet.js
+- **Frontend:** HTML5, CSS3, Jinja2, JavaScript, Leaflet.js, Three.js, Timeline.js
 - **APIs:** [NASA Mars Rover Photos API](https://api.nasa.gov/), [NASA InSight Weather API](https://api.nasa.gov/), [Open Notify ISS API](http://open-notify.org/)
 
 ---
@@ -70,7 +70,7 @@ Pull stunning images directly from NASA’s Mars Rover API, view live Mars weath
 
 Made with ❤️ by Team ~ The NECK  
 Thanks to [NASA Open APIs](https://api.nasa.gov/) for the data and inspiration!
-
+Solar System Scope for Mars Surface textures in 8k!
 ---
 
 ## 📄 License

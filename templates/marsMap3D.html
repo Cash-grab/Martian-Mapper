@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block head %}
+
+<title>Awesome! Mars 3D view!</title>
+<link rel="stylesheet" href="../static/mars3Dstyles.css">
+<!-- INIT. SCRIPT FOR TIMELINE DOWN HERE DONT MESS UP! -->
+ {{ super() }}
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+{% endblock %}
+{% block content %}
+{% block marquee %}{% endblock %}
+<div class="awesomeHeading">
+<h1>Welcome to Awesome Mars!</h1>
+<h2>This is the interactive Mars museuem!</h2>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="../static/js/mars3d.js"></script>
+<div class="timelineContainer"><h3>The entire history of Mars.<span class="guess">I guess</span></h3>
+    <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vRU4gGvhJ23DJCLZlgBC0RfvzZ-frcglonnsNx08xsKbz7GMyCKDLcXxaTmlO2E_9RS963kemGhc4zm&font=Default&lang=en&initial_zoom=2&width=100%25&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+</div>
+
+{% endblock %}
+{% block scriptTags %}
+
+{% endblock %}
