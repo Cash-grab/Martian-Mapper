@@ -6,3 +6,92 @@ canvas{
     height: 100vh;
     width: 100vw;
 }
+.headingFlex{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10vw;
+}
+.blog-container-1 {
+    /* Sizing and Layout */
+    width: autor;
+    margin: 20px;
+    padding: 20px;
+    
+    /* Colors and Background */
+    background-color: var(--background-color); /* Light sand background */
+    color: var(--accent-color); /* Deep brown text */
+    
+    /* Border and Shadow */
+    border-radius: 4px; /* Slightly sharper edges */
+    border: 1px solid var(--primary-color); /* Minimal border */
+    box-shadow: inset 0 0 15px var(--accent-color); /* Inner shadow for depth */
+    
+    /* Custom Styling */
+    font-style: italic;
+    transition: all 0.4s ease;
+    border: 2px solid black;
+}
+.blog-container-1 h1{
+    text-align: center;
+    font-size: 4em;
+    font-family: var(--Ahsing);
+}
+.blog-container-1 h3 {
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+/* Use secondary color for interactive element or button */
+.blog-container-1 button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top:2vh;
+}
+.blog-container-1 img{
+    width: 20%;
+    height: 50%;
+}
+.blog-container-1 button a{
+    text-decoration: none;
+    color: white;
+
+} 
+.blog-container-1 span{
+    display: block;
+    margin: 5vh;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.starting{
+    width: auto;
+    margin: auto;
+    padding: 25px;
+    
+    /* Colors and Background */
+    background-color: var(--accent-color); /* Deep brown background */
+    color: var(--secondary-color); /* Bright yellow/gold text */
+    
+    /* Border and Shadow */
+    border-radius: 15px; /* Softer rounded corners */
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Strong shadow */
+    
+    /* Header Stripe */
+    position: relative;
+    overflow: hidden; /* Contains the pseudo-element stripe */
+}
+.starting::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: var(--primary-color);
+    transition: height 0.3s;
+}

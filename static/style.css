@@ -358,7 +358,7 @@ border: 2px solid black;
 transition: 1s ease-in;
 }
 .awesomeHeading h1{
-    color: var(--primary-color);
+    color: white;
     margin-top: 2vh;
     font-family: var(--Ahsing);
   text-shadow:
@@ -388,6 +388,15 @@ transition: 1s ease-in;
 }
 .timelineContainer{
     margin-bottom: 10vh;
+    text-align: center;
+    font-size: 2em;
+    margin: 20px;
+    font-family: var(--Ahsing);
+    color:white;
+}
+.guess{
+    font-size: 0.5em;
+    color:var(--secondary-color);
 }
 
 @font-face {
